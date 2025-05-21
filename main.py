@@ -107,7 +107,7 @@ def get_face_data(image: Image.Image) -> (np.ndarray, Optional[Dict[str, Any]]):
         transforms.Normalize([0.5], [0.5])
     ])
 
-    face_tensor = preprocess(face_img).unsqueeze(0)
+    face_tensor = preprocess(face_img).unsqueeze(0).to(DEVICE)
 
     # Get embedding
     embedding = resnet(face_tensor).detach().cpu().numpy()[0]

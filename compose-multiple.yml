@@ -1,0 +1,30 @@
+services:
+  fr-1:
+    container_name: "fr-1"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 3g
+    ports:
+      - "8000:8000"
+    restart: always
+
+  fr-2:
+    container_name: "fr-1"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 3g
+    ports:
+      - "8000:8000"
+    restart: always
+
+  fr-3:
+    container_name: "fr-3"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 3g
+    ports:
+      - "8000:8000"
+    restart: always

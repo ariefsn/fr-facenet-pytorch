@@ -1,0 +1,10 @@
+services:
+  fr:
+    container_name: "fr"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 3g
+    ports:
+      - "8000:8000"
+    restart: always
